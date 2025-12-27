@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Eyewear Store</title>
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Eyewear Store</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="auth-container">
+        <h2>Login to Your Account</h2>
+
+        <form onsubmit="handleLogin(event)">
+            <label>Email</label>
+            <input type="email" id="login-email">
+
+            <label>Password</label>
+            <input type="password" id="login-password">
+
+            <button type="submit" class="button">Login</button>
+
+            <p id="login-error"></p>
+            <p>New user? <a href="register.html">Create an account</a></p>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Eyewear Store</p>
+    <p>Developed by Pramod Gyawali</p>
+</footer>
+<script src="js/auth.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Home page */
+main h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+main p {
+    font-size: 16px;
+    color: #6e6e73;
+}
+
+/* Product listing */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+/* Order confirmation */
+.success-message {
+    text-align: center;
+    padding: 80px 24px;
+}
+main section {
+    max-width: 500px;
+    margin: auto;
+}
+.button {
+    display: inline-block;
+    margin-top: 24px;
+}
+section {
+    text-align: center;
+}
+/* Center login & register forms */
+.auth-container {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - 160px); /* header + footer space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
