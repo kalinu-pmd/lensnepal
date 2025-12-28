@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin | Add Product</title>
+
+  <link rel="stylesheet" href="add-product.css" />
+</head>
+<body>
+  <nav class="admin-nav">
+  <a href="products.html">Products</a>
+  <a href="add-product.html">Add Product</a>
+</nav>
+
+
+  <main class="container">
+    <h1>Add New Product</h1>
+
+    <form id="productForm" enctype="multipart/form-data">
+      
+      <!-- Product Name -->
+      <div class="form-group">
+        <label>Product Name</label>
+        <input
+  type="text"
+  id="name"
+  placeholder="Product Name"
+  required
+/>
+
+      </div>
+
+      <!-- Price -->
+      <div class="form-group">
+        <label>Price</label>
+        <input
+  type="number"
+  id="price"
+  placeholder="Price"
+  required
+/>
+
+      </div>
+
+      <!-- Eyewear Type -->
+      <div class="form-group">
+        <label>Eyewear Type</label>
+        <select id="eyewearType" required>
+  <option value="">Select type</option>
+  <option value="sunglasses">Sunglasses</option>
+  <option value="eyeglasses">Eyeglasses</option>
+</select>
+
+      </div>
+
+      <!-- Face Shapes -->
+      <div class="form-group">
+        <label>Suitable Face Shapes</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="round" /> Round</label>
+          <label><input type="checkbox" value="oval" /> Oval</label>
+          <label><input type="checkbox" value="square" /> Square</label>
+          <label><input type="checkbox" value="heart" /> Heart</label>
+        </div>
+      </div>
+      <label>Product Description</label>
+<textarea
+  id="description"
+  placeholder="Enter product description"
+  rows="3"
+  required
+></textarea>
+
+<label>Quantity</label>
+<input
+  type="number"
+  id="quantity"
+  min="0"
+  placeholder="Enter stock quantity"
+  required
+/>
+
+
+      <!-- Image -->
+      <div class="form-group">
+        <label>Product Image</label>
+        <input
+  type="file"
+  id="image"
+  accept="image/*"
+  required
+/>
+
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Add Product</button>
+
+      <!-- Messages -->
+      <p id="message"></p>
+
+    </form>
+  </main>
+
+  <script type="module" src="js/addProduct.js"></script>
+</body>
+</html>

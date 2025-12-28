@@ -23,20 +23,22 @@
 </header>
 
 <main>
-    <section>
-        <h2>Classic Black Frame</h2>
-        <p>Price: NPR 2500</p>
-        <p>Minimal black frame suitable for all face shapes.</p>
+    <div class="product-details">
+  <div class="product-image">
+    <img id="productImage" alt="Product image" />
+  </div>
 
-        <!-- ADD TO CART GOES HERE -->
-        <button onclick="addToCart(1)" class="button">
-    Add to Cart
+  <div class="product-info">
+    <h1 id="productName"></h1>
+    <p id="productPrice"></p>
+    <p id="productDescription"></p>
+
+    <button id="addToCartBtn" class="primary-btn">
+  Add to Cart
 </button>
 
-        
-
-        <a href="ar-tryon.html">Try with AR</a>
-    </section>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -46,7 +48,8 @@
 
 <script src="js/utils.js"></script>
 <script src="js/main.js"></script>
-<script src="js/products.js"></script>
+<script src="js/product-details.js"></script>
+
 
 
 </body>

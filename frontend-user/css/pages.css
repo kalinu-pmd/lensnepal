@@ -45,3 +45,53 @@ main {
     align-items: center;
     justify-content: center;
 }
+/* ============================= */
+/* Primary Button – Add to Cart */
+/* ============================= */
+
+.primary-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn:hover {
+  background-color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.product-info {
+  max-width: 420px;
+}
+
+.product-info h1 {
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  margin-bottom: 14px;
+  color: #555;
+}
+
+.product-info .primary-btn {
+  margin-top: 20px;
+}

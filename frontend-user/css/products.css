@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f9f9f9;
+  color: #111;
+}
+
+.topbar {
+  background: #fff;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.card-body p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.stock {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.stock.in {
+  color: #1e7f41;
+}
+
+.stock.low {
+  color: #b54708;
+}
+
+.stock.out {
+  color: #b42318;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  flex: 1;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin | Products</title>
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+  <nav class="admin-nav">
+  <a href="products.html">Products</a>
+  <a href="add-product.html">Add Product</a>
+</nav>
+
+
+  <header class="topbar">
+    <h1>Admin Panel</h1>
+    <span>Products</span>
+  </header>
+
+  <main class="container">
+    <div id="alert"></div>
+
+    <div id="loading" class="loading">Loading products…</div>
+
+    <div id="products" class="grid"></div>
+  </main>
+
+  <script type="module" src="js/products.js"></script>
+  <div id="editModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Edit Product</h2>
+
+    <input id="editName" placeholder="Product Name" />
+    <input id="editPrice" type="number" placeholder="Price" />
+    <textarea id="editDescription" placeholder="Description"></textarea>
+
+    <div class="qty-control">
+      <button id="qtyMinus">−</button>
+      <input id="editQuantity" type="number" />
+      <button id="qtyPlus">+</button>
+    </div>
+
+    <input id="editImage" type="file" />
+
+    <div class="modal-actions">
+      <button id="saveEdit">Save</button>
+      <button id="cancelEdit">Cancel</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

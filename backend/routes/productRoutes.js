@@ -1,9 +1,22 @@
-const express = require("express");
+import express from "express";
+import upload from "../config/upload.js";
+import {
+  addProduct,
+  getProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct
+} from "../controllers/productControllers.js";
+
 const router = express.Router();
 
-const { getProducts } = require("../controllers/productController");
+// ADMIN
+router.post("/", upload.single("image"), addProduct);
+router.put("/:id", upload.single("image"), updateProduct);
+router.delete("/:id", deleteProduct);
 
-// GET all products
+// USER
 router.get("/", getProducts);
+router.get("/:id", getProductById); // ✅ IMPORTANT
 
 export default router;

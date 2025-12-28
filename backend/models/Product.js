@@ -1,14 +1,54 @@
-// This represents the structure of a product
-class Product {
-    constructor(id, name, price, type, faceShapes, image, available) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.type = type;
-        this.faceShapes = faceShapes;
-        this.image = image;
-        this.available = available;
-    }
-}
+import mongoose from "mongoose";
 
-module.exports = Product;
+const productSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true
+    },
+
+    price: {
+      type: Number,
+      required: true,
+      min: 0
+    },
+
+    description: {
+      type: String,
+      default: ""
+    },
+
+    eyewearType: {
+      type: String,
+      required: true
+    },
+
+    suitableFaceShapes: {
+      type: [String],
+      default: []
+    },
+
+    image: {
+      type: String
+    },
+
+    quantity: {
+      type: Number,
+      required: true,
+      min: 0,
+      default: 0
+    },
+
+    available: {
+      type: Boolean,
+      default: true
+    }
+  },
+  {
+    timestamps: true
+  }
+);
+
+const Product = mongoose.model("Product", productSchema);
+export default Product;
